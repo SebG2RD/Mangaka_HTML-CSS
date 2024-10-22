@@ -1,0 +1,162 @@
+:root {
+    --color-red-- : #b20043;
+    --color-white-- : #ffffff;
+    --color-black--: #000000;
+}
+
+*,::after,::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+.btn {
+    padding: 1rem 5rem;
+    background-color: var(--color-red--);
+    color: var(--color-white--);
+    border-radius: 5rem;
+    border: 1px solid var(--color-white--);
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+} 
+
+.navbar {
+    align-items: center;
+    margin-bottom: 0.5rem;
+    padding: 0 2rem;
+}
+.navbar-menu {
+    background-color: var(--color-red--);
+    text-transform: uppercase;
+}
+h1 {
+    color: var(--color-red--);
+    font-size: 1.5rem;
+}
+
+.navbar-menu a {
+    display: block; 
+    width: 100%; 
+    color: var(--color-white--);
+    text-decoration: none;
+    padding: 0.8rem; 
+    transition: 0.8s;
+}
+.navbar-menu li {
+    width: 100%;
+    border-top: 1px solid var(--color-white--);
+    text-align: center;
+    padding: 0; 
+}
+.navbar-menu li:last-child {
+    border-right: none;
+}
+.navbar-menu a:hover {
+    color: var(--color-black--);
+    background-color: var(--color-white--);
+}
+main {
+    background:url("../Assets/img/background.jpg") bottom / cover no-repeat;
+}
+.actu, .inscription {
+    background-color: #ffffffcc;
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+}
+.actu h2 {
+    margin: 1rem 0;
+}
+
+.actu ul {
+    align-items: flex-start;
+}
+
+.card {
+    border: 1px solid var(--color-red--);
+    margin: 1rem 0;
+    padding: 1rem 0;
+}
+.card .fa-solid {
+    margin-right: 0.5rem;
+}
+.card h3 {
+    text-align: center;
+}
+.card h4, .card p, .card a {
+    padding: 0.5rem 0.3rem;
+}
+.card img {
+    max-width: 100%;
+}
+
+form {
+    text-align: center;
+}
+::placeholder {
+    color: var(--color-red--);
+}
+input {
+    border: 1px solid var(--color-red--);
+    padding: 1rem 3rem;
+    border-radius: 5rem;
+    margin: 1rem 0;
+}
+footer {
+    background-color: var(--color-black--);
+    color: var(--color-white--);
+    text-align: center;
+    min-height: 5rem;
+    padding: 2rem 0;
+}
+footer ul {
+    justify-content: center;
+    flex-direction: row;
+
+}
+footer li {
+    margin: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+    ul {
+        flex-direction: row;
+    }
+    .navbar {
+        justify-content: space-between;    
+    }    
+    .navbar-menu li {
+      border-right: 1px solid var(--color-white--); 
+    }
+    main {
+        padding: 2rem 0;   
+    }
+    .actu, .inscription {
+        width: 55%;
+        margin: 1rem auto;
+    }
+    .inscription {
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .actu ul {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    iframe {
+        height: 20rem;
+    }
+}
